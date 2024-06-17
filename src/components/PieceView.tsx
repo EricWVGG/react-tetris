@@ -15,7 +15,7 @@ const defaultBlock = [
 const PieceView: React.FC<Props> = ({ piece }): JSX.Element => {
   const fromPiece = piece && getBlocks(piece)[0];
   const blocks = fromPiece ?? defaultBlock;
-
+  console.log('piece', piece);
   const rows = blocks.map((row, i) => {
     const blocksInRow = row.map((block, j) => {
       let classString = 'game-block ';
