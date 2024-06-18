@@ -32,7 +32,7 @@ const PieceView: React.FC<Props> = ({ piece }): JSX.Element => {
     return <tr key={i}>{blocksInRow}</tr>;
   });
   return (
-    <table className={`piece-view piece-${piece}`}>
+    <table className={`piece-view piece-view-${piece}`}>
       <tbody>{rows}</tbody>
     </table>
   );
