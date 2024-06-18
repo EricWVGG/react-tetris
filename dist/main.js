@@ -25855,7 +25855,6 @@
   var PieceView = ({ piece }) => {
     const fromPiece = piece && getBlocks(piece)[0];
     const blocks = fromPiece ?? defaultBlock;
-    console.log("piece", piece);
     const rows = blocks.map((row, i2) => {
       const blocksInRow = row.map((block, j2) => {
         let classString = "game-block ";
@@ -25868,7 +25867,7 @@
       });
       return /* @__PURE__ */ import_react4.default.createElement("tr", { key: i2 }, blocksInRow);
     });
-    return /* @__PURE__ */ import_react4.default.createElement("table", { className: "piece-view" }, /* @__PURE__ */ import_react4.default.createElement("tbody", null, rows));
+    return /* @__PURE__ */ import_react4.default.createElement("table", { className: `piece-view piece-view-${piece}` }, /* @__PURE__ */ import_react4.default.createElement("tbody", null, rows));
   };
   var PieceView_default = PieceView;
 
